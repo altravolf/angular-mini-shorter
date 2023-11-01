@@ -1,0 +1,29 @@
+<div class=" py-3">
+    <div class="row justify-content-center">
+        <div class="col-2">
+            <div class="display-4 text-center bg-dark text-white p-3 rounded-4 border ">
+                <div>{{article.votes}}</div>
+                <div>Points</div>
+            </div>
+        </div>
+        <div class="col-3 p-3 bg-white rounded-4 border ">
+            <div class="title fs-3">
+                {{article.title}}
+            </div>
+            <div class="caption">
+                <a [href]="article.link" class="link-dark text-decoration-none fs-5 text-muted"
+                    target="_blank">{{article.domain()}}</a>
+            </div>
+            <!-- <div class="meta">({{ article.domain() }})</div> -->
+            <div class="row pt-2">
+                <div class="col">
+                    <a href="#" class="link-primary text-decoration-none fs-5" (click)="upVote()"> upvote &#x2191;</a>
+                </div>
+                <div class="col">
+                    <a href="#" class="link-primary text-decoration-none fs-5" (click)="downVote()"> downvote &#x2193;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
